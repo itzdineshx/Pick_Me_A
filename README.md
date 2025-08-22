@@ -1,5 +1,8 @@
 # Pick Me A - Entertainment Discovery Hub 🎬🎵🎌
 ![preview](pick0.png)
+<div align="center">
+[![View Site](https://img.shields.io/badge/View_Live_Site-37a779?style=for-the-badge&logo=netlify&logoColor=white)](https://pickmea.netlify.app/)
+</div>
 [![Netlify Status](https://api.netlify.com/api/v1/badges/84c851df-1431-4a33-900c-929777f8c235/deploy-status)](https://pickmea.netlify.app/)
 [![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -18,10 +21,35 @@
 - 📱 **Responsive Design** - Beautiful experience across all devices
 - 🎨 **Dynamic Themes** - Unique visual themes for each entertainment category
 
-## 🚀 Live Demo
+## 🎯 Connected Platforms
 
-[![View Site](https://img.shields.io/badge/View_Live_Site-37a779?style=for-the-badge&logo=netlify&logoColor=white)](https://pickmea.netlify.app/)
+### 🎌 AniePick - Anime Discovery
+[![AniePick Status](https://img.shields.io/badge/Status-Live-00d084?style=flat-square&logo=netlify)](https://aniepick.netlify.app)
+[![Last Updated](https://img.shields.io/badge/Updated-Daily-dc2626?style=flat-square&logo=calendar)](https://aniepick.netlify.app)
 
+- **Theme**: Japanese-inspired with cherry blossom particles
+- **Color**: Deep Red (#dc2626)
+- **Features**: Personalized anime recommendations
+- **Database**: 10,000+ anime titles
+
+### 🎬 CinePick - Movie Discovery  
+[![CinePick Status](https://img.shields.io/badge/Status-Live-00d084?style=flat-square&logo=netlify)](https://cinempick.netlify.app)
+[![Database](https://img.shields.io/badge/Movies-50K+-fbbf24?style=flat-square&logo=imdb)](https://cinempick.netlify.app)
+
+- **Theme**: Hollywood glamour with film strip elements
+- **Color**: Golden Yellow (#fbbf24)  
+- **Features**: Smart movie matching algorithm
+- **Integration**: Powered by The Movie Database
+
+### 🎵 MeloPick - Music Discovery
+[![MeloPick Status](https://img.shields.io/badge/Status-Live-00d084?style=flat-square&logo=netlify)](https://melopick.netlify.app)
+[![Powered By](https://img.shields.io/badge/Powered_By-Spotify-10b981?style=flat-square&logo=spotify)](https://melopick.netlify.app)
+
+- **Theme**: Audio-visual with soundwave animations
+- **Color**: Neon Green (#10b981)
+- **Features**: AI-powered music recommendations
+- **Integration**: Spotify API for seamless discovery
+  
 ## 🛠️ Built With
 
 - **Frontend Framework**: React 18 with TypeScript
