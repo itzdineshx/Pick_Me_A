@@ -1,8 +1,10 @@
 # Pick Me A - Entertainment Discovery Hub 🎬🎵🎌
 ![preview](pick0.png)
+
 <div align="center">
 [![View Site](https://img.shields.io/badge/View_Live_Site-37a779?style=for-the-badge&logo=netlify&logoColor=white)](https://pickmea.netlify.app/)
 </div>
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/84c851df-1431-4a33-900c-929777f8c235/deploy-status)](https://pickmea.netlify.app/)
 [![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
