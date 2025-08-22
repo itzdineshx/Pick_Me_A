@@ -1,4 +1,4 @@
-import enhancedPanoramicBackground from '../assets/enhanced-panoramic-entertainment-universe.jpg';
+import enhancedPanoramicBackground from '../assets/pick3.png';
 
 interface SimpleBackgroundProps {
   activeTheme?: 'anime' | 'cinema' | 'music' | null;
@@ -12,7 +12,7 @@ const SimpleBackground = ({ activeTheme }: SimpleBackgroundProps) => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000"
         style={{
           backgroundImage: `url(${enhancedPanoramicBackground})`,
-          filter: activeTheme ? 'brightness(0.9)' : 'brightness(0.7)',
+          filter: activeTheme ? 'brightness(0.1)' : 'brightness(0.4)',
         }}
       />
       

@@ -6,9 +6,9 @@ import SimpleBackground from '../components/SimpleBackground';
 import PortalTransition from '../components/PortalTransition';
 import EnhancedPortalTransition from '../components/EnhancedPortalTransition';
 import SimpleCursorEffects from '../components/SimpleCursorEffects';
-import sugoiPickLogo from '../assets/sugoi-pick-logo.png';
-import cinePickLogo from '../assets/cine-pick-logo.png';
-import meloPickLogo from '../assets/melopick-logo.png';
+import sugoiPickLogo from '../assets/sugoipick-logo1.png';
+import cinePickLogo from '../assets/cinepick-logo2.png';
+import meloPickLogo from '../assets/melopick-logo2.png';
 
 const Index = () => {
   const isMobile = useIsMobile();
@@ -32,7 +32,7 @@ const Index = () => {
 
   const portals = [
     {
-      title: "Discover Anime",
+      title: "Pick an Anime",
       description: "Dive into the world of anime with personalized recommendations",
       link: "https://aniepick.netlify.app/",
       icon: sugoiPickLogo,
@@ -48,7 +48,7 @@ const Index = () => {
       hoverEffect: "static-glow"
     },
     {
-      title: "Discover Music",
+      title: "Pick a Music",
       description: "Explore new sounds and artists tailored to your taste",
       link: "https://melopick.netlify.app/",
       icon: meloPickLogo,

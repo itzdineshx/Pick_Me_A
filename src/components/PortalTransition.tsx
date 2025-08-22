@@ -7,21 +7,21 @@ interface PortalTransitionProps {
 }
 
 const PortalTransition = ({ theme, isActive, onComplete }: PortalTransitionProps) => {
-  const [phase, setPhase] = useState<'enter' | 'active' | 'exit'>('enter');
+  const [phase, setPhase] = useState<'impact' | 'explosion' | 'warp'>('impact');
 
   useEffect(() => {
     if (isActive) {
-      // Enhanced smooth transition phases
-      const enterTimer = setTimeout(() => setPhase('active'), 400);
-      const exitTimer = setTimeout(() => setPhase('exit'), 800);
+      // Super fast sequence
+      const explosionTimer = setTimeout(() => setPhase('explosion'), 200);
+      const warpTimer = setTimeout(() => setPhase('warp'), 500);
       const completeTimer = setTimeout(() => {
         onComplete();
-        setPhase('enter');
-      }, 1200);
+        setPhase('impact');
+      }, 800);
       
       return () => {
-        clearTimeout(enterTimer);
-        clearTimeout(exitTimer);
+        clearTimeout(explosionTimer);
+        clearTimeout(warpTimer);
         clearTimeout(completeTimer);
       };
     }
@@ -29,102 +29,339 @@ const PortalTransition = ({ theme, isActive, onComplete }: PortalTransitionProps
 
   if (!isActive) return null;
 
-  const transitionClasses = {
-    anime: 'anime-transition',
-    cinema: 'cinema-transition', 
-    music: 'music-transition'
-  };
-
-  const loadingElements = {
+  const themeEffects = {
     anime: (
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className={`text-anime text-6xl font-bold transition-all duration-500 ${
-          phase === 'enter' ? 'animate-scale-in' : 
-          phase === 'active' ? 'animate-glow-pulse' : 
-          'animate-scale-out'
+      <div className="absolute inset-0">
+        {/* Lightning crack effect */}
+        <div className={`absolute inset-0 transition-all duration-200 ${
+          phase === 'impact' ? 'opacity-0 scale-0' :
+          phase === 'explosion' ? 'opacity-100 scale-100' :
+          'opacity-0 scale-150'
         }`}>
-          進入中...
-        </div>
-        <div className="absolute inset-0">
-          {[...Array(30)].map((_, i) => (
+          {/* Electric bolts */}
+          {[...Array(8)].map((_, i) => (
             <div
               key={i}
-              className={`absolute w-3 h-3 bg-anime rounded-full transition-all duration-700 ${
-                phase === 'active' ? 'animate-pulse-smooth opacity-80' : 'opacity-0'
+              className={`absolute w-1 bg-anime shadow-lg shadow-anime animate-lightning ${
+                phase === 'explosion' ? 'opacity-100' : 'opacity-0'
               }`}
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${i * 0.05}s`,
-                transform: phase === 'active' ? 'scale(1)' : 'scale(0)'
+                height: '100vh',
+                left: `${10 + i * 11}%`,
+                transform: `rotate(${-15 + Math.random() * 30}deg)`,
+                animationDelay: `${i * 30}ms`
               }}
             />
           ))}
+          
+          {/* Energy shockwave */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className={`border-4 border-anime rounded-full animate-shockwave ${
+              phase === 'explosion' ? 'opacity-80' : 'opacity-0'
+            }`} style={{ width: '50px', height: '50px' }} />
+          </div>
+        </div>
+
+        {/* Anime symbols burst */}
+        {['⚡', '💥', '✨', '🔥', '💫', '⭐'].map((symbol, i) => (
+          <div
+            key={i}
+            className={`absolute text-6xl transition-all duration-300 ${
+              phase === 'explosion' ? 'animate-symbol-blast opacity-100' : 'opacity-0'
+            }`}
+            style={{
+              left: `${15 + i * 12}%`,
+              top: `${20 + Math.random() * 60}%`,
+              animationDelay: `${i * 50}ms`
+            }}
+          >
+            {symbol}
+          </div>
+        ))}
+
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className={`text-anime text-4xl font-black transition-all duration-250 ${
+            phase === 'impact' ? 'opacity-0 scale-0' :
+            phase === 'explosion' ? 'opacity-100 scale-100 animate-power-glow' :
+            'opacity-0 scale-200'
+          }`}>
+            POWER UP!
+          </div>
         </div>
       </div>
     ),
+
     cinema: (
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className={`text-cinema text-6xl font-bold transition-all duration-500 ${
-          phase === 'enter' ? 'animate-fade-in cinema-flicker' : 
-          phase === 'active' ? 'animate-glow-pulse' : 
-          'animate-fade-out'
-        }`}>
-          LOADING...
-        </div>
-        <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-cinema/30 to-transparent transform -skew-x-12 transition-all duration-800 ${
-          phase === 'active' ? 'animate-slide-in-right' : 'opacity-0'
+      <div className="absolute inset-0 bg-black">
+        {/* Camera flash burst */}
+        <div className={`absolute inset-0 bg-white transition-opacity duration-100 ${
+          phase === 'impact' ? 'opacity-0' :
+          phase === 'explosion' ? 'opacity-90' :
+          'opacity-0'
         }`} />
-      </div>
-    ),
-    music: (
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className={`text-music text-6xl font-bold transition-all duration-500 ${
-          phase === 'enter' ? 'animate-scale-in' : 
-          phase === 'active' ? 'animate-smooth-bounce' : 
-          'animate-scale-out'
+
+        {/* Film strip explosion */}
+        <div className={`absolute inset-0 transition-all duration-300 ${
+          phase === 'explosion' ? 'animate-film-explode opacity-100' : 'opacity-0'
         }`}>
-          ♪ LOADING ♪
-        </div>
-        <div className="absolute bottom-1/3 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {[...Array(15)].map((_, i) => (
+          {/* Diagonal film strips */}
+          {[...Array(6)].map((_, i) => (
             <div
               key={i}
-              className={`w-2 bg-music rounded-full transition-all duration-300 ${
-                phase === 'active' ? 'animate-smooth-bounce' : 'scale-y-0'
+              className="absolute w-full h-16 bg-cinema opacity-80 animate-strip-fly"
+              style={{
+                top: `${i * 15}%`,
+                transform: `rotate(${-20 + i * 8}deg)`,
+                animationDelay: `${i * 40}ms`
+              }}
+            >
+              {/* Film holes */}
+              <div className="flex h-full items-center justify-around">
+                {[...Array(20)].map((_, j) => (
+                  <div key={j} className="w-4 h-4 bg-black rounded-full" />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Spotlight burst */}
+        <div className={`absolute inset-0 bg-gradient-radial from-cinema/60 to-transparent animate-spotlight-burst ${
+          phase === 'explosion' ? 'opacity-100' : 'opacity-0'
+        }`} />
+
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className={`text-cinema text-4xl font-black transition-all duration-200 ${
+            phase === 'impact' ? 'opacity-0 rotate-12' :
+            phase === 'explosion' ? 'opacity-100 rotate-0 animate-neon-flicker' :
+            'opacity-0 -rotate-12'
+          }`}>
+            LIGHTS! CAMERA!
+          </div>
+        </div>
+      </div>
+    ),
+
+    music: (
+      <div className="absolute inset-0">
+        {/* Sound boom visual */}
+        <div className={`absolute inset-0 transition-all duration-200 ${
+          phase === 'impact' ? 'scale-0 opacity-0' :
+          phase === 'explosion' ? 'scale-100 opacity-100' :
+          'scale-300 opacity-0'
+        }`}>
+          {/* Circular sound waves */}
+          {[...Array(5)].map((_, i) => (
+            <div
+              key={i}
+              className={`absolute border-4 border-music rounded-full animate-sound-boom ${
+                phase === 'explosion' ? 'opacity-70' : 'opacity-0'
               }`}
               style={{
-                height: `${20 + Math.random() * 50}px`,
-                animationDelay: `${i * 0.08}s`
+                width: `${100 + i * 80}px`,
+                height: `${100 + i * 80}px`,
+                left: '50%',
+                top: '50%',
+                marginLeft: `${-50 - i * 40}px`,
+                marginTop: `${-50 - i * 40}px`,
+                animationDelay: `${i * 60}ms`
               }}
             />
           ))}
+        </div>
+
+        {/* Bass drop visualization */}
+        <div className="absolute bottom-0 left-0 w-full h-32 flex items-end justify-center space-x-1">
+          {[...Array(25)].map((_, i) => (
+            <div
+              key={i}
+              className={`w-3 bg-music rounded-t transition-all duration-200 ${
+                phase === 'explosion' ? 'animate-bass-drop opacity-100' : 'opacity-0 h-0'
+              }`}
+              style={{
+                height: `${20 + Math.random() * 80}px`,
+                animationDelay: `${i * 20}ms`
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Musical explosion */}
+        {['🎵', '🎶', '🎤', '🎧', '🔊', '🎸', '🥁', '🎹'].map((note, i) => (
+          <div
+            key={i}
+            className={`absolute text-5xl transition-all duration-300 ${
+              phase === 'explosion' ? 'animate-note-explosion opacity-100' : 'opacity-0'
+            }`}
+            style={{
+              left: `${Math.random() * 80 + 10}%`,
+              top: `${Math.random() * 80 + 10}%`,
+              animationDelay: `${i * 40}ms`
+            }}
+          >
+            {note}
+          </div>
+        ))}
+
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className={`text-music text-4xl font-black transition-all duration-200 ${
+            phase === 'impact' ? 'opacity-0 scale-0' :
+            phase === 'explosion' ? 'opacity-100 scale-100 animate-bass-pulse' :
+            'opacity-0 scale-150'
+          }`}>
+            BASS DROP!
+          </div>
         </div>
       </div>
     )
   };
 
   return (
-    <div className={`portal-transition fixed inset-0 z-1000 pointer-events-none ${
-      phase === 'enter' ? 'animate-portal-enter' : 
-      phase === 'exit' ? 'animate-portal-exit' : ''
-    } ${transitionClasses[theme]}`}>
-      {loadingElements[theme]}
-      
-      {/* Enhanced progress indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-80 h-2 bg-black/30 rounded-full overflow-hidden backdrop-blur-sm">
-        <div 
-          className={`h-full bg-${theme}-glow rounded-full transition-all duration-1200 ease-out shadow-lg ${
-            phase === 'enter' ? 'w-1/3' : 
-            phase === 'active' ? 'w-2/3' : 
-            'w-full'
-          }`}
-          style={{
-            boxShadow: `0 0 20px hsl(var(--${theme}-glow) / 0.6)`
-          }}
-        />
+    <>
+      {/* Screen crack overlay */}
+      <div className={`fixed inset-0 z-40 pointer-events-none ${
+        phase === 'impact' ? 'animate-screen-crack' : 'opacity-0'
+      }`}>
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent" />
+        {/* Crack lines */}
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute bg-white/30 animate-crack-spread"
+            style={{
+              width: '2px',
+              height: '100vh',
+              left: `${20 + i * 15}%`,
+              transform: `rotate(${-10 + Math.random() * 20}deg)`,
+              animationDelay: `${i * 30}ms`
+            }}
+          />
+        ))}
       </div>
-    </div>
+
+      {/* Main effect overlay */}
+      <div className={`fixed inset-0 z-50 transition-all duration-200 ${
+        theme === 'anime' ? 'bg-gradient-radial from-purple-500/80 via-indigo-600/60 to-black/90' :
+        theme === 'cinema' ? 'bg-gradient-radial from-amber-500/80 via-red-600/60 to-black/90' :
+        'bg-gradient-radial from-emerald-500/80 via-teal-600/60 to-black/90'
+      } ${
+        phase === 'impact' ? 'opacity-0' : 'opacity-100'
+      }`}>
+        {themeEffects[theme]}
+      </div>
+
+      {/* Warp exit effect */}
+      <div className={`fixed inset-0 z-60 pointer-events-none ${
+        phase === 'warp' ? 'animate-dimension-warp opacity-100' : 'opacity-0'
+      }`}>
+        <div className="absolute inset-0 bg-white animate-warp-flash" />
+        <div className="absolute inset-0 bg-gradient-conic from-transparent via-white/50 to-transparent animate-spin-warp" />
+      </div>
+
+      <style jsx>{`
+        @keyframes lightning {
+          0%, 100% { opacity: 0; transform: scaleY(0); }
+          10% { opacity: 1; transform: scaleY(1); }
+          20% { opacity: 0; transform: scaleY(0); }
+          30% { opacity: 1; transform: scaleY(1); }
+          40% { opacity: 0; transform: scaleY(0); }
+        }
+        @keyframes shockwave {
+          0% { width: 50px; height: 50px; opacity: 1; }
+          100% { width: 500px; height: 500px; opacity: 0; }
+        }
+        @keyframes symbol-blast {
+          0% { transform: scale(0) rotate(0deg); opacity: 0; }
+          50% { transform: scale(1.5) rotate(180deg); opacity: 1; }
+          100% { transform: scale(0.5) rotate(360deg); opacity: 0; }
+        }
+        @keyframes power-glow {
+          0%, 100% { text-shadow: 0 0 10px currentColor, 0 0 20px currentColor; }
+          50% { text-shadow: 0 0 30px currentColor, 0 0 50px currentColor; }
+        }
+        @keyframes film-explode {
+          0% { transform: scale(1) rotate(0deg); }
+          100% { transform: scale(2) rotate(10deg); }
+        }
+        @keyframes strip-fly {
+          0% { transform: translateX(0) rotate(var(--rotation, 0deg)); }
+          100% { transform: translateX(100vw) rotate(calc(var(--rotation, 0deg) + 180deg)); }
+        }
+        @keyframes spotlight-burst {
+          0% { transform: scale(0); opacity: 0; }
+          50% { transform: scale(1); opacity: 1; }
+          100% { transform: scale(3); opacity: 0; }
+        }
+        @keyframes neon-flicker {
+          0%, 100% { text-shadow: 0 0 5px currentColor; }
+          25% { text-shadow: 0 0 20px currentColor, 0 0 30px currentColor; }
+          50% { text-shadow: 0 0 5px currentColor; }
+          75% { text-shadow: 0 0 25px currentColor, 0 0 35px currentColor; }
+        }
+        @keyframes sound-boom {
+          0% { transform: scale(0); opacity: 1; }
+          100% { transform: scale(4); opacity: 0; }
+        }
+        @keyframes bass-drop {
+          0% { height: 0; transform: scaleY(0); }
+          30% { height: 120px; transform: scaleY(1.5); }
+           100% { height: var(--final-height); transform: scaleY(1); }
+        }
+        @keyframes note-explosion {
+          0% { transform: scale(0) rotate(0deg); opacity: 0; }
+          30% { transform: scale(2) rotate(180deg); opacity: 1; }
+          100% { transform: scale(0.3) rotate(360deg); opacity: 0; }
+        }
+        @keyframes bass-pulse {
+          0%, 100% { transform: scale(1); filter: brightness(1); }
+          50% { transform: scale(1.2); filter: brightness(1.5); }
+        }
+        @keyframes screen-crack {
+          0% { opacity: 0; }
+          20% { opacity: 1; }
+          100% { opacity: 0; }
+        }
+        @keyframes crack-spread {
+          0% { height: 0; opacity: 0; }
+          50% { height: 100vh; opacity: 1; }
+          100% { height: 100vh; opacity: 0; }
+        }
+        @keyframes dimension-warp {
+          0% { transform: scale(0); opacity: 1; }
+          100% { transform: scale(50); opacity: 0; }
+        }
+        @keyframes warp-flash {
+          0%, 90% { opacity: 0; }
+          95% { opacity: 1; }
+          100% { opacity: 0; }
+        }
+        @keyframes spin-warp {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(1440deg); }
+        }
+
+        .animate-lightning { animation: lightning 0.4s ease-out; }
+        .animate-shockwave { animation: shockwave 0.6s ease-out; }
+        .animate-symbol-blast { animation: symbol-blast 0.5s ease-out; }
+        .animate-power-glow { animation: power-glow 0.3s infinite; }
+        .animate-film-explode { animation: film-explode 0.4s ease-out; }
+        .animate-strip-fly { animation: strip-fly 0.6s ease-out; }
+        .animate-spotlight-burst { animation: spotlight-burst 0.5s ease-out; }
+        .animate-neon-flicker { animation: neon-flicker 0.2s infinite; }
+        .animate-sound-boom { animation: sound-boom 0.7s ease-out; }
+        .animate-bass-drop { animation: bass-drop 0.4s ease-out; }
+        .animate-note-explosion { animation: note-explosion 0.6s ease-out; }
+        .animate-bass-pulse { animation: bass-pulse 0.25s infinite; }
+        .animate-screen-crack { animation: screen-crack 0.2s ease-out; }
+        .animate-crack-spread { animation: crack-spread 0.3s ease-out; }
+        .animate-dimension-warp { animation: dimension-warp 0.3s ease-in; }
+        .animate-warp-flash { animation: warp-flash 0.3s ease-out; }
+        .animate-spin-warp { animation: spin-warp 0.3s ease-in; }
+
+        .bg-gradient-radial { background: radial-gradient(circle, var(--tw-gradient-stops)); }
+        .bg-gradient-conic { background: conic-gradient(var(--tw-gradient-stops)); }
+      `}</style>
+    </>
   );
 };
 

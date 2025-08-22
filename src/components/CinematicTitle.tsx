@@ -10,8 +10,8 @@ const CinematicTitle = () => {
   useEffect(() => {
     // Cinematic entrance sequence
     const timer1 = setTimeout(() => setShowTitle(true), 500);
-    const timer2 = setTimeout(() => setShowFlare(true), 2000);
-    const timer3 = setTimeout(() => setShowSubtitle(true), 2500);
+    const timer2 = setTimeout(() => setShowFlare(true), 1000);
+    const timer3 = setTimeout(() => setShowSubtitle(true), 1500);
     
     return () => {
       clearTimeout(timer1);
@@ -40,14 +40,53 @@ const CinematicTitle = () => {
         )}
       </div>
 
-      {/* Subtitle */}
-      <div className={`transition-all duration-1000 delay-500 ${
-        showSubtitle ? 'opacity-100 fade-in-cinematic' : 'opacity-0'
-      }`}>
-        <p className={`${isMobile ? 'text-lg sm:text-xl' : 'text-xl md:text-2xl lg:text-3xl'} text-muted-foreground ${isMobile ? 'max-w-sm' : 'max-w-4xl'} leading-relaxed ${isMobile ? 'mobile-subtitle-glow' : ''}`}>
-          Discover your next favorite anime, movie, or song — all in one place.
+      {/* Subtitle Section */}
+      <div
+        className={`transition-all duration-1000 delay-500 ${
+          showSubtitle ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        }`}
+      >
+        <p
+          className={`
+            ${isMobile ? "text-lg sm:text-xl" : "text-2xl md:text-3xl lg:text-4xl"} 
+            text-muted-foreground 
+            text-center font-semibold 
+            tracking-wider leading-snug 
+            ${isMobile ? "mobile-subtitle-glow" : "drop-shadow-md"}
+          `}
+        >
+          🎬 ANIME • 🎥 MOVIE • 🎵 SONG
         </p>
       </div>
+      <br></br>
+      <div
+        className={`transition-all duration-1000 delay-700 ${
+          showSubtitle ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        }`}
+      >
+        <p
+          className={`
+            ${isMobile ? "text-sm sm:text-base" : "text-lg md:text-xl lg:text-xl"} 
+            text-muted-foreground 
+            text-center mt-3 
+            font-light tracking-normal leading-relaxed
+            ${isMobile ? "mobile-subtitle-glow" : "drop-shadow"}
+          `}
+        >
+          Developed by{" "}
+          <a
+            href="https://itzdineshx.github.io/portfolio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="signature-glow"
+          >
+            DINESH S
+          </a>
+          {" "}• No repeats in your session
+        </p>
+      </div>
+
+
     </div>
   );
 };
