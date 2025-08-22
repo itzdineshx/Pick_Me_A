@@ -1,6 +1,6 @@
 # Pick Me A - Entertainment Discovery Hub 🎬🎵🎌
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-site-id/deploy-status)](https://your-app-name.netlify.app)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/84c851df-1431-4a33-900c-929777f8c235/deploy-status)](https://pickmea.netlify.app/)
 [![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.0+-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -20,7 +20,7 @@
 
 ## 🚀 Live Demo
 
-[![View Site](https://img.shields.io/badge/View_Live_Site-37a779?style=for-the-badge&logo=netlify&logoColor=white)](https://your-app-name.netlify.app)
+[![View Site](https://img.shields.io/badge/View_Live_Site-37a779?style=for-the-badge&logo=netlify&logoColor=white)](https://pickmea.netlify.app/)
 
 ## 🛠️ Built With
 
@@ -65,15 +65,119 @@ The application will be available at `http://localhost:8080`
 ## 📁 Project Structure
 
 ```
-src/
-├── components/          # Reusable UI components
-│   ├── ui/             # Base UI components (shadcn/ui)
-│   ├── Portal3D.tsx    # 3D portal effects
-│   └── ...
-├── pages/              # Route components
-├── hooks/              # Custom React hooks
-├── lib/                # Utility functions
-└── assets/             # Static assets (images, logos)
+├── .gitignore
+├── LICENSE
+├── README.md
+├── bun.lockb
+├── components.json
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── public
+    ├── placeholder.svg
+    └── surprise-box.png
+├── src
+    ├── App.css
+    ├── App.tsx
+    ├── assets
+    │   ├── anime-eye-icon.png
+    │   ├── cine-pick-logo.png
+    │   ├── cinematic-entertainment-background.jpg
+    │   ├── cinepick-logo2.png
+    │   ├── enhanced-panoramic-entertainment-universe.jpg
+    │   ├── equalizer-icon.png
+    │   ├── film-reel-icon.png
+    │   ├── melopick-logo.png
+    │   ├── melopick-logo2.png
+    │   ├── panoramic-entertainment-background.jpg
+    │   ├── panoramic-entertainment-universe.jpg
+    │   ├── pick.jpg
+    │   ├── pick2.png
+    │   ├── pick3.png
+    │   ├── sugoi-pick-logo.png
+    │   └── sugoipick-logo1.png
+    ├── components
+    │   ├── AdvancedCursorEffects.tsx
+    │   ├── CinematicTitle.tsx
+    │   ├── Enhanced3DPortalCard.tsx
+    │   ├── EnhancedPortalCard.tsx
+    │   ├── EnhancedPortalTransition.tsx
+    │   ├── Portal3D.tsx
+    │   ├── PortalCard.tsx
+    │   ├── PortalCardEffects.tsx
+    │   ├── PortalCardIcon.tsx
+    │   ├── PortalTransition.tsx
+    │   ├── SimpleBackground.tsx
+    │   ├── SimpleCursorEffects.tsx
+    │   ├── UniverseBackground.tsx
+    │   └── ui
+    │   │   ├── accordion.tsx
+    │   │   ├── alert-dialog.tsx
+    │   │   ├── alert.tsx
+    │   │   ├── aspect-ratio.tsx
+    │   │   ├── avatar.tsx
+    │   │   ├── badge.tsx
+    │   │   ├── breadcrumb.tsx
+    │   │   ├── button.tsx
+    │   │   ├── calendar.tsx
+    │   │   ├── card.tsx
+    │   │   ├── carousel.tsx
+    │   │   ├── chart.tsx
+    │   │   ├── checkbox.tsx
+    │   │   ├── collapsible.tsx
+    │   │   ├── command.tsx
+    │   │   ├── context-menu.tsx
+    │   │   ├── dialog.tsx
+    │   │   ├── drawer.tsx
+    │   │   ├── dropdown-menu.tsx
+    │   │   ├── form.tsx
+    │   │   ├── hover-card.tsx
+    │   │   ├── input-otp.tsx
+    │   │   ├── input.tsx
+    │   │   ├── label.tsx
+    │   │   ├── menubar.tsx
+    │   │   ├── navigation-menu.tsx
+    │   │   ├── pagination.tsx
+    │   │   ├── popover.tsx
+    │   │   ├── progress.tsx
+    │   │   ├── radio-group.tsx
+    │   │   ├── resizable.tsx
+    │   │   ├── scroll-area.tsx
+    │   │   ├── select.tsx
+    │   │   ├── separator.tsx
+    │   │   ├── sheet.tsx
+    │   │   ├── sidebar.tsx
+    │   │   ├── skeleton.tsx
+    │   │   ├── slider.tsx
+    │   │   ├── sonner.tsx
+    │   │   ├── switch.tsx
+    │   │   ├── table.tsx
+    │   │   ├── tabs.tsx
+    │   │   ├── textarea.tsx
+    │   │   ├── toast.tsx
+    │   │   ├── toaster.tsx
+    │   │   ├── toggle-group.tsx
+    │   │   ├── toggle.tsx
+    │   │   ├── tooltip.tsx
+    │   │   └── use-toast.ts
+    ├── hooks
+    │   ├── use-mobile.tsx
+    │   └── use-toast.ts
+    ├── index.css
+    ├── lib
+    │   └── utils.ts
+    ├── main.tsx
+    ├── pages
+    │   ├── Index.tsx
+    │   └── NotFound.tsx
+    └── vite-env.d.ts
+├── tailwind.config.ts
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
 ```
 
 ## 🎨 Design System
@@ -130,8 +234,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **DINESH S**
 
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/your-username)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-profile)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/itzdineshx)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dineshs2/)
 
 ## 🙏 Acknowledgments
 
