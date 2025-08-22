@@ -258,7 +258,7 @@ const PortalTransition = ({ theme, isActive, onComplete }: PortalTransitionProps
         <div className="absolute inset-0 bg-gradient-conic from-transparent via-white/50 to-transparent animate-spin-warp" />
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes lightning {
           0%, 100% { opacity: 0; transform: scaleY(0); }
           10% { opacity: 1; transform: scaleY(1); }
