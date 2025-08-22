@@ -29,7 +29,9 @@
 
 ### 🎌 AniePick - Anime Discovery
 [![AniePick Status](https://img.shields.io/badge/Status-Live-00d084?style=flat-square&logo=netlify)](https://aniepick.netlify.app)
-[![Last Updated](https://img.shields.io/badge/Updated-Daily-dc2626?style=flat-square&logo=calendar)](https://aniepick.netlify.app)
+![Jikan API v4](https://img.shields.io/badge/Jikan%20API-v4-2E51A2?logo=myanimelist&logoColor=white&labelColor=1B1F23&style=flat-square)
+![API Status](https://img.shields.io/website?url=https%3A%2F%2Fapi.jikan.moe%2Fv4&label=Jikan%20API&style=flat-square)
+
 
 - **Theme**: Japanese-inspired with cherry blossom particles
 - **Color**: Deep Red (#dc2626)
@@ -38,7 +40,9 @@
 
 ### 🎬 CinePick - Movie Discovery  
 [![CinePick Status](https://img.shields.io/badge/Status-Live-00d084?style=flat-square&logo=netlify)](https://cinempick.netlify.app)
-[![Database](https://img.shields.io/badge/Movies-50K+-fbbf24?style=flat-square&logo=imdb)](https://cinempick.netlify.app)
+![IMDb API](https://img.shields.io/badge/IMDb-API-F5C518?logo=imdb&logoColor=black&labelColor=1B1F23&style=flat-square)
+![API Status](https://img.shields.io/website?url=https%3A%2F%2Fimdb-api.com&label=IMDb%20API&style=flat-square)
+
 
 - **Theme**: Hollywood glamour with film strip elements
 - **Color**: Golden Yellow (#fbbf24)  
@@ -47,7 +51,9 @@
 
 ### 🎵 MeloPick - Music Discovery
 [![MeloPick Status](https://img.shields.io/badge/Status-Live-00d084?style=flat-square&logo=netlify)](https://melopick.netlify.app)
-[![Powered By](https://img.shields.io/badge/Powered_By-Spotify-10b981?style=flat-square&logo=spotify)](https://melopick.netlify.app)
+![Spotify API](https://img.shields.io/badge/Spotify-API-1DB954?logo=spotify&logoColor=white&labelColor=1B1F23&style=flat-square)
+![API Status](https://img.shields.io/website?url=https%3A%2F%2Fapi.spotify.com&label=Spotify%20API&style=flat-square)
+
 
 - **Theme**: Audio-visual with soundwave animations
 - **Color**: Neon Green (#10b981)
