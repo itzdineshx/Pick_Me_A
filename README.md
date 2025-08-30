@@ -28,6 +28,7 @@
 
 ### 🎌 AniePick - Anime Discovery
 [![AniePick Status](https://img.shields.io/badge/Status-Live-00d084?style=flat-square&logo=netlify)](https://aniepick.netlify.app)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-AniePick-dc2626?style=flat-square&logo=github&logoColor=white)](https://github.com/itzdineshx/Anie_Pick)
 ![Jikan API v4](https://img.shields.io/badge/Jikan%20API-v4-2E51A2?logo=myanimelist&logoColor=white&labelColor=1B1F23&style=flat-square)
 ![API Status](https://img.shields.io/website?url=https%3A%2F%2Fapi.jikan.moe%2Fv4&label=Jikan%20API&style=flat-square)
 
@@ -39,6 +40,7 @@
 
 ### 🎬 CinePick - Movie Discovery  
 [![CinePick Status](https://img.shields.io/badge/Status-Live-00d084?style=flat-square&logo=netlify)](https://cinempick.netlify.app)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-CinePick-fbbf24?style=flat-square&logo=github&logoColor=black)](https://github.com/itzdineshx/Cine_Pick)
 ![IMDb API](https://img.shields.io/badge/IMDb-API-F5C518?logo=imdb&logoColor=black&labelColor=1B1F23&style=flat-square)
 ![API Status](https://img.shields.io/website?url=https%3A%2F%2Fimdb-api.com&label=IMDb%20API&style=flat-square)
 
@@ -50,6 +52,7 @@
 
 ### 🎵 MeloPick - Music Discovery
 [![MeloPick Status](https://img.shields.io/badge/Status-Live-00d084?style=flat-square&logo=netlify)](https://melopick.netlify.app)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-MeloPick-10b981?style=flat-square&logo=github&logoColor=white)](https://github.com/itzdineshx/Melo_Pick)
 ![Spotify API](https://img.shields.io/badge/Spotify-API-1DB954?logo=spotify&logoColor=white&labelColor=1B1F23&style=flat-square)
 ![API Status](https://img.shields.io/website?url=https%3A%2F%2Fapi.spotify.com&label=Spotify%20API&style=flat-square)
 
