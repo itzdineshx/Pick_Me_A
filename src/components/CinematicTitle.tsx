@@ -84,6 +84,51 @@ const CinematicTitle = () => {
           </a>
           {" "}• No repeats in your session
         </p>
+        
+        {/* Social Badges */}
+        <div className={`flex flex-wrap items-center justify-center gap-4 mt-6 ${isMobile ? 'gap-3' : 'gap-4'}`}>
+          {/* Peerlist Badge */}
+          <a 
+            href="https://peerlist.io/personal_dev/project/pick-me-a" 
+            target="_blank" 
+            rel="noreferrer"
+            className="transform transition-all duration-300 hover:scale-105 rounded-lg overflow-hidden shadow-lg hover:shadow-xl"
+          >
+            <img
+              src="https://peerlist.io/api/v1/projects/embed/PRJHP6L86K6DDM88MIRR866DKOAJNP?showUpvote=true&theme=dark"
+              alt="Pick Me A on Peerlist"
+              className={`${isMobile ? 'h-12' : 'h-16'} w-auto block`}
+            />
+          </a>
+
+          {/* Product Hunt Badge */}
+          <a 
+            href="https://www.producthunt.com/products/pick-me-a?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-pick%E2%80%91me%E2%80%91a" 
+            target="_blank"
+            rel="noreferrer"
+            className="transform transition-all duration-300 hover:scale-105 rounded-lg overflow-hidden shadow-lg hover:shadow-xl"
+          >
+            <img 
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1011161&theme=dark&t=1756707053692" 
+              alt="Pick Me A - Discover your next favorite entertainment | Product Hunt" 
+              className={`${isMobile ? 'h-12' : 'h-16'} w-auto block`}
+            />
+          </a>
+
+          {/* Buy Me a Coffee Badge */}
+          <a 
+            href="https://www.buymeacoffee.com/Dinesh_xo"
+            target="_blank"
+            rel="noreferrer"
+            className="transform transition-all duration-300 hover:scale-105 rounded-lg overflow-hidden shadow-lg hover:shadow-xl"
+          >
+            <img 
+              src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=Dinesh_xo&button_colour=000000&font_colour=ffffff&font_family=Cookie&outline_colour=ffffff&coffee_colour=FFDD00" 
+              alt="Buy me a coffee"
+              className={`${isMobile ? 'h-12' : 'h-16'} w-auto block`}
+            />
+          </a>
+        </div>
       </div>
 
 
