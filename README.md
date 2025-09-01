@@ -2,16 +2,26 @@
 ![preview](pick0.png)
 
 <div align="center">
-  
-[![View Site](https://img.shields.io/badge/View_Live_Site-37a779?style=for-the-badge&logo=netlify&logoColor=white)](https://pickmea.netlify.app/)
+
+[![Live Site](https://img.shields.io/badge/_Live_Site-37a779?style=flat-square&logo=netlify&logoColor=white&labelColor=1e293b)](https://pickmea.netlify.app/) [![Peerlist](https://img.shields.io/badge/_Peerlist-Featured-orange?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K&logoColor=white&labelColor=1a1a1a)](https://peerlist.io/personal_dev/project/pick-me-a)
+[![Product Hunt](https://img.shields.io/badge/_Product_Hunt-Featured-ff6154?style=flat-square&logo=producthunt&logoColor=white&labelColor=1a1a1a)](https://www.producthunt.com/products/pick-me-a)
 
 </div>
 
-[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.0+-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4+-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+---
+
+<div align="center">
+
+[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat-square&logo=react&logoColor=white&labelColor=20232A)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=flat-square&logo=typescript&logoColor=white&labelColor=1e293b)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.0+-646CFF?style=flat-square&logo=vite&logoColor=white&labelColor=1a1a1a)](https://vitejs.dev/)
+[![Tailwind](https://img.shields.io/badge/Tailwind-3.4+-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white&labelColor=0f172a)](https://tailwindcss.com/)
+[![MIT](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square&logoColor=white&labelColor=065f46)](https://opensource.org/licenses/MIT)
+
+</div>
+
+</div>
 
 > **An immersive cinematic hub for discovering your next favorite anime, movies, and music**
 
