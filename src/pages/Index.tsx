@@ -67,14 +67,9 @@ const Index = () => {
       {/* Simple Cursor Effects */}
       <SimpleCursorEffects activeTheme={activeTheme} />
       
-      {/* GitHub Star Badge - Top-right for desktop */}
-      <div className="pointer-events-auto fixed right-4 top-4 z-40 hidden sm:block">
+      {/* GitHub Star Badge - Top-right for both desktop and mobile */}
+      <div className="pointer-events-auto fixed right-4 top-4 z-40">
         <GitHubStarBadge repoFullName="itzdineshx/Pick_Me_A" />
-      </div>
-      
-      {/* GitHub Star Badge - Mobile placement: floating bottom-right */}
-      <div className="sm:hidden fixed right-3 bottom-3 z-40">
-        <GitHubStarBadge repoFullName="itzdineshx/Pick_Me_A" compact />
       </div>
       
       {/* Enhanced Portal Transition Overlay */}

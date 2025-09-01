@@ -22,6 +22,8 @@ const CinematicTitle = () => {
 
   return (
     <div className={`relative flex flex-col items-center justify-center min-h-screen text-center ${isMobile ? 'px-6' : 'px-4'}`}>
+
+
       {/* Main Title */}
       <div className={`relative ${isMobile ? 'mb-6' : 'mb-8'}`}>
         <h1 className={`${isMobile ? 'text-4xl sm:text-5xl' : 'text-6xl md:text-8xl lg:text-9xl'} font-bold tracking-wider transition-all duration-1000 ${
@@ -86,52 +88,75 @@ const CinematicTitle = () => {
         </p>
         
         {/* Social Badges */}
-        <div className={`flex flex-wrap items-center justify-center gap-4 mt-6 ${isMobile ? 'gap-3' : 'gap-4'}`}>
-          {/* Peerlist Badge */}
-          <a 
-            href="https://peerlist.io/personal_dev/project/pick-me-a" 
-            target="_blank" 
-            rel="noreferrer"
-            className="transform transition-all duration-300 hover:scale-105 rounded-lg overflow-hidden shadow-lg hover:shadow-xl"
-          >
-            <img
-              src="https://peerlist.io/api/v1/projects/embed/PRJHP6L86K6DDM88MIRR866DKOAJNP?showUpvote=true&theme=dark"
-              alt="Pick Me A on Peerlist"
-              className={`${isMobile ? 'h-12' : 'h-16'} w-auto block`}
-            />
-          </a>
+        <div className="flex items-center justify-center mt-6">
+          {/* Desktop: All badges */}
+          {!isMobile && (
+            <div className="flex flex-wrap gap-4">
+              {/* Peerlist Badge */}
+              <div>
+                <a 
+                  href="https://peerlist.io/personal_dev/project/pick-me-a" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="transform transition-all duration-300 hover:scale-105 rounded-lg overflow-hidden shadow-lg hover:shadow-xl inline-block"
+                >
+                  <img
+                    src="https://peerlist.io/api/v1/projects/embed/PRJHP6L86K6DDM88MIRR866DKOAJNP?showUpvote=true&theme=dark"
+                    alt="Pick Me A on Peerlist"
+                    className="h-16 w-auto block"
+                  />
+                </a>
+              </div>
 
-          {/* Product Hunt Badge */}
-          <a 
-            href="https://www.producthunt.com/products/pick-me-a?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-pick%E2%80%91me%E2%80%91a" 
-            target="_blank"
-            rel="noreferrer"
-            className="transform transition-all duration-300 hover:scale-105 rounded-lg overflow-hidden shadow-lg hover:shadow-xl"
-          >
-            <img 
-              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1011161&theme=dark&t=1756707053692" 
-              alt="Pick Me A - Discover your next favorite entertainment | Product Hunt" 
-              className={`${isMobile ? 'h-12' : 'h-16'} w-auto block`}
-            />
-          </a>
+              {/* Product Hunt Badge */}
+              <div>
+                <a 
+                  href="https://www.producthunt.com/products/pick-me-a?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-pick%E2%80%91me%E2%80%91a" 
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transform transition-all duration-300 hover:scale-105 rounded-lg overflow-hidden shadow-lg hover:shadow-xl inline-block"
+                >
+                  <img 
+                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1011161&theme=dark&t=1756707053692" 
+                    alt="Pick Me A - Discover your next favorite entertainment | Product Hunt" 
+                    className="h-16 w-auto block"
+                  />
+                </a>
+              </div>
 
-          {/* Buy Me a Coffee Badge */}
-          <a 
-            href="https://www.buymeacoffee.com/Dinesh_xo"
-            target="_blank"
-            rel="noreferrer"
-            className="transform transition-all duration-300 hover:scale-105 rounded-lg overflow-hidden shadow-lg hover:shadow-xl"
-          >
-            <img 
-              src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=Dinesh_xo&button_colour=000000&font_colour=ffffff&font_family=Cookie&outline_colour=ffffff&coffee_colour=FFDD00" 
-              alt="Buy me a coffee"
-              className={`${isMobile ? 'h-12' : 'h-16'} w-auto block`}
-            />
-          </a>
+              {/* Buy Me a Coffee Badge */}
+              <a 
+                href="https://www.buymeacoffee.com/Dinesh_xo"
+                target="_blank"
+                rel="noreferrer"
+                className="transform transition-all duration-300 hover:scale-105 rounded-lg overflow-hidden shadow-lg hover:shadow-xl"
+              >
+                <img 
+                  src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=Dinesh_xo&button_colour=171717&font_colour=ffffff&font_family=Cookie&outline_colour=ffffff&coffee_colour=FFDD00" 
+                  alt="Buy me a coffee"
+                  className="h-16 w-auto block"
+                />
+              </a>
+            </div>
+          )}
+
+          {/* Mobile: Only Buy Me a Coffee Badge */}
+          {isMobile && (
+            <a 
+              href="https://www.buymeacoffee.com/Dinesh_xo"
+              target="_blank"
+              rel="noreferrer"
+              className="transform transition-all duration-300 hover:scale-105 rounded-lg overflow-hidden shadow-lg hover:shadow-xl"
+            >
+              <img 
+                src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=Dinesh_xo&button_colour=000000&font_colour=ffffff&font_family=Cookie&outline_colour=ffffff&coffee_colour=FFDD00" 
+                alt="Buy me a coffee"
+                className="h-12 w-auto block"
+              />
+            </a>
+          )}
         </div>
       </div>
-
-
     </div>
   );
 };
