@@ -6,6 +6,7 @@ import SimpleBackground from '../components/SimpleBackground';
 import PortalTransition from '../components/PortalTransition';
 import EnhancedPortalTransition from '../components/EnhancedPortalTransition';
 import SimpleCursorEffects from '../components/SimpleCursorEffects';
+import GitHubStarBadge from '../components/GitHubStarBadge';
 import sugoiPickLogo from '../assets/sugoipick-logo1.png';
 import cinePickLogo from '../assets/cinepick-logo2.png';
 import meloPickLogo from '../assets/melopick-logo2.png';
@@ -64,6 +65,16 @@ const Index = () => {
       
       {/* Simple Cursor Effects */}
       <SimpleCursorEffects activeTheme={activeTheme} />
+      
+      {/* GitHub Star Badge - Top-right for desktop */}
+      <div className="pointer-events-auto fixed right-4 top-4 z-40 hidden sm:block">
+        <GitHubStarBadge repoFullName="itzdineshx/pick-me-a" />
+      </div>
+      
+      {/* GitHub Star Badge - Mobile placement: floating bottom-right */}
+      <div className="sm:hidden fixed right-3 bottom-3 z-40">
+        <GitHubStarBadge repoFullName="itzdineshx/pick-me-a" compact />
+      </div>
       
       {/* Enhanced Portal Transition Overlay */}
       {transitionTheme && (
