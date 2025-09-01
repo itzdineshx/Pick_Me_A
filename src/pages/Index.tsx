@@ -7,6 +7,7 @@ import PortalTransition from '../components/PortalTransition';
 import EnhancedPortalTransition from '../components/EnhancedPortalTransition';
 import SimpleCursorEffects from '../components/SimpleCursorEffects';
 import GitHubStarBadge from '../components/GitHubStarBadge';
+import SocialBadges from '../components/SocialBadges';
 import sugoiPickLogo from '../assets/sugoipick-logo1.png';
 import cinePickLogo from '../assets/cinepick-logo2.png';
 import meloPickLogo from '../assets/melopick-logo2.png';
@@ -91,6 +92,9 @@ const Index = () => {
         <section className="min-h-screen flex items-center justify-center">
           <CinematicTitle />
         </section>
+
+        {/* Social Badges Section */}
+        <SocialBadges />
 
         {/* Enhanced Portal Cards Section */}
         <section className={`min-h-screen flex items-center justify-center px-4 py-20 ${isMobile ? 'py-12' : 'py-20'}`}>
