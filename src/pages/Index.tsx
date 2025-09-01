@@ -7,7 +7,7 @@ import PortalTransition from '../components/PortalTransition';
 import EnhancedPortalTransition from '../components/EnhancedPortalTransition';
 import SimpleCursorEffects from '../components/SimpleCursorEffects';
 import GitHubStarBadge from '../components/GitHubStarBadge';
-import SocialBadges from '../components/SocialBadges';
+
 import sugoiPickLogo from '../assets/sugoipick-logo1.png';
 import cinePickLogo from '../assets/cinepick-logo2.png';
 import meloPickLogo from '../assets/melopick-logo2.png';
@@ -89,12 +89,19 @@ const Index = () => {
       {/* Main Content */}
       <div className="relative z-10">
         {/* Cinematic Title Section */}
-        <section className="min-h-screen flex items-center justify-center">
+        <section className="min-h-screen flex items-center justify-center relative">
           <CinematicTitle />
+          
+          {/* Scroll Encouraging Animation */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div className="flex flex-col items-center space-y-2">
+              <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+                <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
+              </div>
+              <div className="text-white/50 text-xs font-light tracking-wider">SCROLL</div>
+            </div>
+          </div>
         </section>
-
-        {/* Social Badges Section */}
-        <SocialBadges />
 
         {/* Enhanced Portal Cards Section */}
         <section className={`min-h-screen flex items-center justify-center px-4 py-20 ${isMobile ? 'py-12' : 'py-20'}`}>
